@@ -24,34 +24,40 @@
         <!-- Contact Section Form -->
         <div class="row">
             <div class="col-lg-8 mx-auto">
-                <form id="contactForm" name="sentMessage" novalidate="novalidate">
+                {% if success %}
+                <div class="alert alert-success" role="alert">
+                    Your message was sent! Check your inbox for a response.
+                </div>
+                {% endif %}
+
+                <form id="contactForm" name="sentMessage" novalidate="novalidate" method="post">
+                    {% csrf_token %}
+                    
+                    {% if form.non_field_errors %}
+                    <div class="alert_danger" role="alert">
+                        {{form.non_field_errors}}
+                    </div>
+                    {% endif %}
+
+                    {% for field in form %}
                     <div class="control-group">
                         <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Name</label>
-                            <input class="form-control" id="name" type="text" placeholder="Name" required="required" data-validation-required-message="Please enter your name." />
-                            <p class="help-block text-danger"></p>
+                            {{ field.label_tag }}
+                            {{ field }}
+                            {% for error in field.errors %}
+                            <p class="help-block text-danger">{{error}}</p>
+                            {% endfor %}
                         </div>
                     </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Email Address</label>
-                            <input class="form-control" id="email" type="email" placeholder="Email Address" required="required" data-validation-required-message="Please enter your email address." />
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
-                    <div class="control-group">
-                        <div class="form-group floating-label-form-group controls mb-0 pb-2">
-                            <label>Message</label>
-                            <textarea class="form-control" id="message" rows="5" placeholder="Message" required="required" data-validation-required-message="Please enter your message." ></textarea>
-                            <p class="help-block text-danger"></p>
-                        </div>
-                    </div>
+                    {% endfor %}
+
                     <br />
-                    <div id="success"></div>
+                    
                     <div class="form-group"><button class="btn hs-bg-primary btn-xl text-white" id="sendMessageButton" type="submit">Send</button></div>
                 </form>
             </div>
         </div>
     </div>
 </section>
+
 {% endblock %}
