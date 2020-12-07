@@ -11,7 +11,9 @@ urlpatterns = [
     path('vocabulary',views.vocabulary, name="vocabulary"),
     path('food',views.food, name="food"),
     path('animals',views.animals, name="animals"),
-    # path('sizes',views.sizes, name="sizes"),
-    # path('differentobjects',views.differentobjects, name="different objects"),
+    path('clothes',views.clothes, name="clothes"),
+    path('different objects',views.differentobjects, name="different objects"),
+    path('grammar1',views.grammar1, name="grammar1"),
+    path('funfact1', views.funfact1, name="funfact1"),
     
 ]

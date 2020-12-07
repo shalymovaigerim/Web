@@ -23,9 +23,15 @@ def food(request):
 def animals(request):
      return render(request, "animals.html")
 
-# def sizes(request):
-#     return render(request, "sizes.html")
+def clothes(request):
+     return render(request, "clothes.html")
 
-# def different objects(request):
-#     return render(request, "differentobjects.html")
+def differentobjects(request):
+     return render(request, "differentobjects.html")
+
+def grammar1(request):
+     return render(request, "grammar1.html")
+
+def funfact1(request):
+     return render(request, "funfact1.html")
 
