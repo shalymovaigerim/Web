@@ -2,7 +2,7 @@
 {% load static %}
 
 {% block title %}Home{% endblock %}
-
+{% url 'public:grammar_url' as grammar_url %}
 {% block content %}
         <!-- Masthead-->
         <header class="masthead  text-black text-center">
@@ -13,9 +13,7 @@
                 <h1 class="masthead-heading text-uppercase mb-0">English Made Easy</h1>
             </div>
         </header>
-<h1>
 
-</h1>
 <!-- Portfolio Section-->
 <section class="page-section portfolio" id="portfolio">
     <div class="container">
@@ -59,4 +57,81 @@
         </div>
     </div>
 </section>    
+<link href="{% static 'css/vocabstyle.css' %}" rel=stylesheet />
+<vocabstyle id="vocabstyle">
+<!-- Portfolio Modal 1-->
+    <div class="portfolio-modal modal fade" id="portfolioModal1" tabindex="-1" role="dialog" aria-labelledby="portfolioModal1Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal1Label">Grammar</h2>
+                                <a href="grammar">Grammar</a>
+                            </div>
+                        </div> 
+                    </div>           
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<!-- Portfolio Modal 2-->
+    <div class="portfolio-modal modal fade" id="portfolioModal2" tabindex="-1" role="dialog" aria-labelledby="portfolioModal2Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal2Label">Vocabulary</h2>
+                                <a href="food">Food</a>
+                                <br/>
+                                <a href="animals">Animals</a>
+                                <br/>
+                                <a href="sizes">Sizes</a>
+                                <br/>
+                                <a href="different objects">different objects</a>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>
+        </div>
+    </div>
+<!-- Portfolio Modal 3-->
+    <div class="portfolio-modal modal fade" id="portfolioModal3" tabindex="-1" role="dialog" aria-labelledby="portfolioModal3Label" aria-hidden="true">
+        <div class="modal-dialog modal-xl" role="document">
+            <div class="modal-content">
+                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true"><i class="fas fa-times"></i></span>
+                </button>
+                <div class="modal-body text-center">
+                    <div class="container">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-8">
+                                <!-- Portfolio Modal - Title-->
+                                <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0" id="portfolioModal3Label">Fun Facts</h2>           
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>        
+</vocabstyle>
+
+
 {% endblock %}
