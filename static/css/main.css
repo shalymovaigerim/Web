@@ -1,0 +1,115 @@
+#main {
+  padding-top: 74px;
+
+}
+
+@media (min-width: 992px) {
+    #main {
+    padding-top: 104px;
+    }
+}
+
+
+.navbar-brand {
+  font-family: 'Arial';
+}
+
+.masthead .masthead-avatar {
+  width: 170px;
+  height: 170px;
+}
+
+.masthead {
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  
+}
+
+@media (min-width: 992px) {
+  .masthead {
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+  }
+}
+.hs-bg-primary {
+  background-color:#b68e36;
+}
+
+.hs-bg-secondary {
+  background-color:#515151;
+}
+
+.masthead .masthead-heading {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+@media (min-width: 992px){
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active {
+      color: white;
+      background: none;
+      border-color: #b68e36;
+    }
+  }
+  
+@media (min-width: 992px){
+  #mainNav .navbar-nav > li.nav-item > a.nav-link.active:hover {
+        color: #b68e36 ;
+        background: none;
+        
+      }
+  }
+
+#mainNav .navbar-nav li.nav-item a.nav-link {
+  border-bottom: 2px solid transparent;
+  transition: border-bottom .2s, color .2s;
+}
+
+#mainNav .navbar-nav li.nav-item a.nav-link:hover {
+  color: #b68e36;
+  border-color: #b68e36;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.activate {
+  background: none;
+  color: white;
+  border-color: #b68e36;
+}
+#mainNav .navbar-nav li.nav-item a.nav-link.activate:hover {
+  background: none;
+  color: #b68e36;
+}
+.footer {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: #515151;
+  color: #fff;
+}
+.portfolio-modal .close {
+  position: absolute;
+  z-index: 1;
+  right: 1.5rem;
+  top: 1rem;
+  font-size: 3rem;
+  line-height: 3rem;
+  color:#b68e36;
+  opacity: 1;
+}
+a {
+  color: #b68e36;
+  text-decoration: none;
+  background-color: transparent;
+}
+.text-secondary {
+  color: #515151 !important;
+}
+.divider-custom .divider-custom-line {
+  width: 100%;
+  max-width: 7rem;
+  height: 0.25rem;
+  background-color: #515151;
+  border-radius: 1rem;
+  border-color: #515151 !important;
+}
+.divider-custom .divider-custom-icon {
+  color: #515151 !important;
+  font-size: 2rem;
+}

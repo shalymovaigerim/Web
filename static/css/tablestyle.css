@@ -1,0 +1,29 @@
+table {
+    width: 600px;
+    
+}
+
+th, caption {
+    text-align: left;
+    font-size: 30px;
+}
+
+table,th,td {
+    border: 1px solid #000;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    font-size:30px;
+}
+
+tr:nth-child(even) {
+    background-color: #fff;
+
+}
+
+tr:nth-child(odd) {
+    background-color:#b68e36; 
+    
+}
